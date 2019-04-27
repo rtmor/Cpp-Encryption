@@ -25,7 +25,7 @@ string caesarEncrypt(string cleartext, int shift=1) {
     return ciphertext;
 }
 
-string caesarDecrypt(string cleartext,int shift=3) {
+string caesarDecrypt(string cleartext,int shift=1) {
 
     string alpha = "abcdefghijklmnopqrstuvwxyz";
     string ciphertext;
