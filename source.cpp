@@ -95,9 +95,9 @@ string subDecrypt(string cleartext, int shift=0) {
 
 void bruteforce(string ciphertext) {
 
-    cout << left << setw(25) << "Caesar Brute Force" << "Substitution Brute Force"<< endl;
+    cout << left << setw(40) << "Caesar Brute Force" << "Substitution Brute Force"<< endl;
     for(int shift{1};shift<=26;shift++) {
-        cout << left << setw(25) << caesarEncrypt(ciphertext,shift);
+        cout << left << setw(40) << caesarEncrypt(ciphertext,shift);
         cout << subDecrypt(ciphertext,shift) << endl;
     }
 }
@@ -118,8 +118,7 @@ int main() {
     cout << "Decrypt: " << subDecrypt(subEncrypt(cleartext)) << endl;
     cout << endl; */
     cout << "Bruteforce" << endl;
-    cout << subEncrypt("stay at the ymza") << endl;
-    cout << subDecrypt("ulqu") << endl;
-    bruteforce("mcib ic cro bdvi");
+    cout << subEncrypt("triple zulu one two three") << endl;
+    bruteforce("suzfny lmnm eky she siuyy");
     
 }
