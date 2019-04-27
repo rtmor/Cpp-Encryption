@@ -12,7 +12,7 @@ string caesarEncrypt(string cleartext, int shift=1) {
     for(int i{0};i<=cleartext.length();i++) {
         for(int j{0};j<26;j++) {
             if(cleartext[i] == ' ' ) {
-                ciphertext += " ";
+                ciphertext += ' ';
                 break;           
             }
             if(cleartext[i] == alpha[j]) {
@@ -34,7 +34,7 @@ string caesarDecrypt(string cleartext,int shift=1) {
     for(int i{0};i<=cleartext.length();i++) {
         for(int j{0};j<26;j++) {
             if(cleartext[i] == ' ' ) {
-                ciphertext += " ";
+                ciphertext += ' ';
                 break;           
             }
             if(cleartext[i] == alpha[j]) {
@@ -47,7 +47,7 @@ string caesarDecrypt(string cleartext,int shift=1) {
     return ciphertext;
 }
 
-string subEncrypt(string cleartext, int shift=10) {
+string subEncrypt(string cleartext, int shift=0) {
     
     string alpha =    "kfleyinjxrawdchvumtqzpsgob";
     string subalpha = "moswlfxtecbjnypzkgqudhvria";
@@ -95,9 +95,9 @@ string subDecrypt(string cleartext, int shift=0) {
 
 void bruteforce(string ciphertext) {
 
-    cout << left << setw(40) << "Caesar Brute Force" << "Substitution Brute Force"<< endl;
+    cout << left << setw(35) << "Caesar Brute Force" << "Substitution Brute Force"<< endl;
     for(int shift{1};shift<=26;shift++) {
-        cout << left << setw(40) << caesarEncrypt(ciphertext,shift);
+        cout << left << setw(35) << caesarEncrypt(ciphertext,shift);
         cout << subDecrypt(ciphertext,shift) << endl;
     }
 }
@@ -106,7 +106,7 @@ int main() {
 
     string cleartext,ciphertext;
 
-/*     cout << "Enter Clear Text" << endl;
+    cout << "Enter Clear Text" << endl;
     getline(cin,cleartext);
     cout << endl;
     cout << "Caesar" << endl;
@@ -116,9 +116,10 @@ int main() {
     cout << "Substitution" << endl;
     cout << "Encrypt: " << subEncrypt(cleartext) << endl;
     cout << "Decrypt: " << subDecrypt(subEncrypt(cleartext)) << endl;
-    cout << endl; */
+    cout << endl;
     cout << "Bruteforce" << endl;
-    cout << subEncrypt("triple zulu one two three") << endl;
-    bruteforce("suzfny lmnm eky she siuyy");
+    // cout << subEncrypt("triple zulu one two three") << endl;
+    // cout << subDecrypt(subEncrypt(cleartext)) << endl;
+    bruteforce(subEncrypt(cleartext));
     
 }
