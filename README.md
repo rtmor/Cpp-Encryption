@@ -14,8 +14,8 @@
       2. Input of a char or string informs user of error and returns to top of
          function
    4. **Moved local variables to private data as needed.**
-   5. **Addressed function overload issue by including overload in prototype**
-      functions
+   5. **Addressed function overload issue by including overload in prototype
+      functions**
    6. **Wrote clear_screen() function:**
       1. Determines compiler's architecture to clear_screen between function
          calls regardless of Windows or Linux environment.
