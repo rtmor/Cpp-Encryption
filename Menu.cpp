@@ -449,7 +449,7 @@ void Menu::superMenu()
 		break;
 	default:
 		cout << endl;
-		cout << "Invalid Choid" <<
+		cout << "Invalid Choice" <<
 				"\nPlease Choose Again" << endl;
 		Menu::sleep();
 		Menu::superMenu();
