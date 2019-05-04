@@ -12,6 +12,7 @@ C++ Encryption/Decryption Project
 #include <string>
 #include <chrono>
 #include <thread>
+#include <cstdlib>
 using namespace std;
 
 class Menu//creating the class

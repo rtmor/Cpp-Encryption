@@ -460,6 +460,10 @@ void Menu::superMenu()
 void Menu::clear_screen() {
 	#ifdef WINDOWS
 	    std::system("cls");
+	#elif _WIN32
+		std::system("cls");
+	#elif _WIN64
+		std::system("cls");
 	#else
 	    // Assume POSIX
 	    std::system ("clear");
