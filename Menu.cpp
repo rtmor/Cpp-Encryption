@@ -287,6 +287,7 @@ void Menu::bruteforce(string ciphertext) {
 		if (shift == 1) {
 			cout << left << setw(35) << Menu::caesarEncrypt(ciphertext, shift);
 			cout << Menu::subDecrypt(ciphertext) << endl;
+			continue;
 		}
 		cout << left << setw(35) << Menu::caesarEncrypt(ciphertext, shift) << endl;
 	}
