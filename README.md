@@ -1,7 +1,7 @@
 ## C++ Encryption Project
 **Final Product**
 
-* **Completed Tasks**
+* *Completed Tasks*
    1. **Rewrote essential functions (now in working order)**
    2. **Proper input validation**
       1. Inputting a character or string when int was desired would break
