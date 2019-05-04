@@ -51,6 +51,8 @@ private://private data members
 	int caesarindex;
 	int subindex;
 	string cleartext;
-	string alpha = "kfleyinjxrawdchvumtqzpsgob";
-	string subalpha = "moswlfxtecbjnypzkgqudhvria";
+	string upAlpha =  "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	string alpha =    "abcdefghijklmnopqrstuvwxyz";
+	string upSubAlpha="MOSWLXFTECBJNYPZKGQUDHVRIA";
+	string subalpha = "moswlxftecbjnypzkgqudhvria";
 };//end class Menu

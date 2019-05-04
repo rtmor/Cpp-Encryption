@@ -131,9 +131,15 @@ string Menu::subEncrypt(string cleartext) {
 				ciphertext += ' ';
 				break;
 			}
-			if (cleartext[i] == alpha[j]) {
-				ciphertext += subalpha[j];
-				break;
+			if (toupper(cleartext[i]) == toupper(alpha[j])) {
+				if (isupper(cleartext[i])) {
+					ciphertext += toupper(subalpha[j]);
+					break;
+				}
+				else {
+					ciphertext += subalpha[j];
+					break;
+				}
 			}
 		}
 	}
@@ -149,10 +155,17 @@ string Menu::caesarEncrypt(string cleartext, int shift) {
 				ciphertext += ' ';
 				break;
 			}
-			if (cleartext[i] == alpha[j]) {
-				caesarindex = (j + shift) % 26;
-				ciphertext += alpha[caesarindex];
-				break;
+			if (toupper(cleartext[i]) == toupper(alpha[j])) {
+				if (isupper(cleartext[i])) {
+					caesarindex = (j + shift) % 26;
+					ciphertext += toupper(alpha[caesarindex]);
+					break;
+				}
+				else {
+					caesarindex = (j + shift) % 26;
+					ciphertext += alpha[caesarindex];
+					break;
+				}
 			}
 		}
 	}
@@ -252,9 +265,15 @@ string Menu::subDecrypt(string cleartext) {
 				ciphertext += ' ';
 				break;
 			}
-			if (cleartext[i] == subalpha[j]) {
-				ciphertext += alpha[j];
-				break;
+			if (toupper(cleartext[i]) == toupper(subalpha[j])) {
+				if (isupper(cleartext[i])) {
+					ciphertext += toupper(alpha[j]);
+					break;
+				}
+				else {
+					ciphertext += alpha[j];
+					break;
+				}
 			}
 		}
 	}
@@ -270,10 +289,17 @@ string Menu::caesarDecrypt(string cleartext, int shift) {
 				ciphertext += ' ';
 				break;
 			}
-			if (cleartext[i] == alpha[j]) {
-				caesarindex = (26 + j - shift) % 26;
-				ciphertext += alpha[caesarindex];
-				break;
+			if (toupper(cleartext[i])== toupper(alpha[j])) {
+				if (isupper(cleartext[i])) {
+					caesarindex = (26 + j - shift) % 26;
+					ciphertext += toupper(alpha[caesarindex]);
+					break;
+				}
+				else {
+					caesarindex = (26 + j - shift) % 26;
+					ciphertext += alpha[caesarindex];
+					break;
+				}
 			}
 		}
 	}
@@ -282,7 +308,7 @@ string Menu::caesarDecrypt(string cleartext, int shift) {
 void Menu::bruteforce(string ciphertext) {
 
 	cout << endl;
-	cout << left << setw(35) << "Caesar Brute Force" << "Substitution Brute Force" << endl;
+	cout << left << setw(35) << "Caesar Brute Force" << "Substitution Cipher" << endl;
 	for (int shift{ 1 }; shift <= 26; shift++) {
 		if (shift == 1) {
 			cout << left << setw(35) << Menu::caesarEncrypt(ciphertext, shift);
