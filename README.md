@@ -22,6 +22,6 @@
    7. **Wrote sleep() function:**
       1. Creates a timed pause after error to display error message prior to
          clear of screen and returning to function top.
-   8. **Replaced menu if/if else/else for better error handling.**
+   8. **Replaced menu if/if else/else with switch for better error handling.**
    9. **Reorganized bruteforce() function to what is expected of assignment
       requirements**
