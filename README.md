@@ -25,3 +25,4 @@
    8. **Replaced menu if/if else/else with switch for better error handling.**
    9. **Reorganized bruteforce() function to what is expected of assignment
       requirements**
+   10. **Included lowercase/uppercase support**
