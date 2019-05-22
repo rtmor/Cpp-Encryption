@@ -1,9 +1,4 @@
 /*
-Daniel Gaska
-Ryan Moran
-Elisabeth Brooks
-Anthony Scalise
-
 C++ Encryption/Decryption Project
 */
 
