@@ -26,3 +26,4 @@
    9. **Reorganized bruteforce() function to what is expected of assignment
       requirements**
    10. **Included lowercase/uppercase support**
+   11. *Added transposition offset prompt*
