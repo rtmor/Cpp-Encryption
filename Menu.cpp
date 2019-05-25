@@ -252,8 +252,17 @@ void Menu::enCaeMenu()
 			cout << "\nEnter Clear Text" << endl;	// prompt user for cleartext
 			cin.ignore();				// clear input buffer
 			getline(cin, cleartext);	// save cleartext input
+			cout << "Enter Offset Value: ";
+			cin >> shift;
+			if (!cin) {
+				cout << "Invalid Input" << endl;
+				cin.clear();
+				cin.ignore(999,'\n');
+				Menu::sleep();
+				Menu::enCaeMenu();
+			}
 			// return caesar encrypted cleartext
-			cout << "Encrypted message: " << Menu::caesarEncrypt(cleartext) << endl;
+			cout << "Encrypted message: " << Menu::caesarEncrypt(cleartext, shift) << endl;
 			cout << endl;
 			Menu::superMenu();		// call main submenu
 			break;
@@ -415,8 +424,17 @@ void Menu::deCaeMenu()
 			cout << "\nEnter Clear Text" << endl; // prompt user for ciphertext
 			cin.ignore();						  // clear input buffer
 			getline(cin, cleartext);			  // save ciphertext
+			cout << "Enter Offset Value: ";     // prompt offset value
+			cin >> shift;
+			if (!cin) {
+				cout << "Invalid Input" << endl;
+				cin.clear();
+				cin.ignore(999,'\n');
+				Menu::sleep();
+				Menu::deCaeMenu();
+			}
 			// return decrypted transposition ciphertext
-			cout << "Decrypted message: " << Menu::caesarDecrypt(cleartext) << endl;
+			cout << "Decrypted message: " << Menu::caesarDecrypt(cleartext, shift) << endl;
 			cout << endl;
 			Menu::superMenu();				// call main submenu
 			break;

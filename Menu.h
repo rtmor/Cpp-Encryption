@@ -1,4 +1,9 @@
 /*
+Daniel Gaska
+Ryan Moran
+Elisabeth Brooks
+Anthony Scalise
+
 C++ Encryption/Decryption Project
 */
 
@@ -45,6 +50,7 @@ private://private data members
 	int superChoice{ 0 };
 	int caesarindex;
 	int subindex;
+	int shift{13};
 	string cleartext;
 	string alpha =    "abcdefghijklmnopqrstuvwxyz";
 	string subalpha = "moswlxftecbjnypzkgqudhvria";
